@@ -12,3 +12,4 @@ components:
   - ./DEA 
   - ./UAA
   - ./Loggregator
+  - ./IPsec-add-on
