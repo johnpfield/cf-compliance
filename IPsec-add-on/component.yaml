@@ -17,4 +17,4 @@ satisfies:
     text: The BOSH Add-on runtime configuration manifest requires a CA certificate and a host (instance)
       certificate to be supplied.  During BOSH deployment, these certificates are installed onto each IPsec peer.
       These certificates should be issued from the deployer's authorized Certificate Authority.  
-  standard_key: PCI-DSS-MAY-2015
+  standard_key: PCI-DSS-Standards
