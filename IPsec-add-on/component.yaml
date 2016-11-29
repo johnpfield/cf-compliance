@@ -1,20 +1,23 @@
 ---
-documentation_complete: true
 name: IPsec-add-on
+key: IPsec-add-on
+documentation_complete: true
+schema_version: 3.0.0
 references:
-- name: IPsec-add-on
-  path: http://docs.pivotal.io/addon-ipsec/index.html
-  type: URL
+  - name: IPsec-add-on
+    path: http://docs.pivotal.io/addon-ipsec/index.html
+    type: URL
 satisfies:
-- control_key: 4.1
-  covered_by: []
-  implementation_status: complete
-  narrative:
-  - key: c
-    text: After the IPsec-add-on has been installed on CF, all network traffic within the Elastic runtime
-      will be encrypted with strong cryptography while in transit.  The add-on uses AES128-GCM.   
-  - key: d
-    text: The BOSH Add-on runtime configuration manifest requires a CA certificate and a host (instance)
-      certificate to be supplied.  During BOSH deployment, these certificates are installed onto each IPsec peer.
-      These certificates should be issued from the deployer's authorized Certificate Authority.  
-  standard_key: PCI-DSS-Standards
+  - standard_key: PCI-DSS-Standards
+    control_key: 4.1
+    narrative:
+      - key: c
+        text: "After the IPsec-add-on has been installed on CF, all network traffic within the Elastic runtime\
+        \ will be encrypted with strong cryptography while in transit.  The add-on uses AES128-GCM."   
+      - key: d
+        text: "The BOSH Add-on runtime configuration manifest requires a CA certificate and a host \
+        \ (instance) certificate to be supplied.  During BOSH deployment, these certificates are \
+        \ installed onto each IPsec peer. These certificates should be issued from the deployers \
+        \ authorized Certificate Authority."  
+    covered_by: []
+    implementation_statuses: complete
