@@ -1,8 +1,8 @@
 ---
-documentation_complete: false
-name: IPsec BOSH Add On
+documentation_complete: true
+name: IPsec-add-on
 references:
-- name: IPsec BOSH Add On
+- name: IPsec-add-on
   path: http://docs.pivotal.io/addon-ipsec/index.html
   type: URL
 satisfies:
