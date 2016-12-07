@@ -70,14 +70,14 @@ satisfies:
 - control_key: 2.2.1
   covered_by: []
   - verification_key: 
-  implementation_status: complete
+  implementation_status: none
   narrative: 'A Cloud Foundry deployment is a distributed environment that consists of many 
       different platform jobs running on different VMs.  BOSH uses the deployment manifest to 
       describe which CF job is to be run on each VM.  Thus, each VM in the deployment is 
       dedicated to running a specified job, and is resource-sized accordingly.  The only case
       when an Elastic Runtime VM is specifically hosting more than one job function is in the 
       case of Add-on security agents, such as the file integrity monitoring or an antivirus agent, 
-      which may be co-located with a primary job function, such as the Cloud Controller, or CF router.   
+      which may be co-located with a primary job function, such as the Cloud Controller, or CF router.
 
     '
   standard_key: PCI-DSS-Standards
