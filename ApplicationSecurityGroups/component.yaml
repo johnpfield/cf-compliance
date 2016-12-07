@@ -60,9 +60,6 @@ satisfies:
 
     '
   standard_key: NIST-800-53
-  #
-  # PCI DSS 
-  #
 - control_key: 1.3.4
   covered_by: []
   implementation_status: none
@@ -79,9 +76,6 @@ satisfies:
 
     '
   standard_key: PCI-DSS-Standards
-#
-#
-#
 schema_version: 2.0
 verifications:
 - description: "GIVEN I am using an admin account THEN I can view and print all the\
