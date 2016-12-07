@@ -60,6 +60,22 @@ satisfies:
 
     '
   standard_key: NIST-800-53
+- control_key: 1.3.4
+  covered_by: []
+  implementation_status: none
+  narrative: 'PCF uses application security groups act as virtual firewalls
+    to control outbound traffic from the applications in deployment. PCF evaluates
+    security groups and other network traffic rules in a strict priority order. Cloud
+    Foundry returns and allow, deny, or reject result for the first rule that matches
+    the outbound traffic request parameters, and does not evaluate any lower-priority
+    rules. Cloud Foundry evaluates the network traffic rules for an application in
+    the following order:
+
+    Security Groups: The rules described by the Default Staging set, the Default Running
+    set, and all security groups bound to the space.
+
+    '
+  standard_key: PCI-DSS-Standards
 schema_version: 2.0
 verifications:
 - description: "GIVEN I am using an admin account THEN I can view and print all the\
