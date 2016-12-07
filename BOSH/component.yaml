@@ -69,7 +69,6 @@ satisfies:
   standard_key: NIST-800-53
 - control_key: 2.2.1
   covered_by: []
-  - verification_key: 
   implementation_status: none
   narrative: 'A Cloud Foundry deployment is a distributed environment that consists of many 
       different platform jobs running on different VMs.  BOSH uses the deployment manifest to 
