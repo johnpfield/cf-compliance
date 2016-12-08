@@ -1,0 +1,19 @@
+---
+name: ClamAV-add-on
+key: ClamAV-add-on
+documentation_complete: true
+schema_version: 3.0.0
+references:
+  - name: ClamAV-add-on
+    path: http://docs.pivotal.io/addon-antivirus/index.html
+    type: URL
+satisfies:
+  - standard_key: PCI-DSS-Standards
+    control_key: 5.1
+    narrative:
+      Anti-virus protection can be added to Cloud Foundry via the BOSH Add-on feature.  A ClamAV 
+      Add-on release is available, or customers may also deploy another anti-virus solution packaged
+      as a BOSH Add-on. Using the Add-on feature, operators can ensure that the anti-virus agent is 
+      installed on all target VMs across the Cloud foundry deployment.     
+    covered_by: []
+    implementation_statuses: complete
