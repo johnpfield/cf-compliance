@@ -8,41 +8,43 @@ references:
     path: http://docs.pivotal.io/addon-antivirus/index.html
     type: URL
 satisfies:
-  - standard_key: PCI-DSS-Standards
-    control_key: 5.1
-    narrative:
-      - key: 1
-        text: "Anti-virus protection can be added to Cloud Foundry via the BOSH Add-on feature. \  
-        \ ClamAV is a widely used open source solution for anti-virus protection.  A ClamAV \ 
-        \ Add-on release is available, or customers may also deploy another anti-virus solution packaged \
-        \ as a BOSH Add-on. Using this Add-on feature, operators can ensure that the anti-virus agent is \
-        \ installed on all target VMs across the Cloud foundry deployment."
-    control_key: 5.2
-    narrative:
-      - key: b
-        text: "ClamAV configuration is controlled via the runtime-configuration.yml deployment manifest, \
-        \ and the ClamAV configuration file.  Periodic and/or on-demand scanning may be verified by \
-        \ inspecting these files." 
-      - key: c
-        text: "The ClamAV anti-virus signatures are kept up to date via the fleshclam daemon, which is \
-        \ installed as part of the add-on release. Logs providing evidence of anti-virus scan activity \
-        \ are emitted to syslog. "
-      - key: d
-        text: "All ClamAV add-on logs are written to the configured syslog drain.  The proper retention \
-        \ and lifecycle management of these logs is then the responsibility of the operators."
-     control_key: 5.3
-     narrative:
-       - key: a
-         text: "BOSH and monit ensure that any deployed jobs, including ClamAV anti-virus, \
-         \ remain healthy. If for some reason the ClamAV anti-virus job is not actively running, \
-         \ BOSH will detect and correct the condition." 
-       - key: b
-         text: "As described above, BOSH is responsible for maintaining the inventory of active jobs \
-         \ in a deployment.  End users have no capability to disable or alter the anti-virus software."
-       - key: c
-         text: "Configuration of which VMs within the Cloud Foundry deployment will run the ClamAV \
-         \ anti-virus agent is determined by the BOSH Add-on runtime configuration manifest.  Changing \
-         \ which virtual machines are running anti-virus protection requires a BOSH operator to update \
-         \ the runtime configuration deployment manifest, and then perform a redeployment operation. "
-    covered_by: []
-    implementation_statuses: complete
+- control_key: 5.1
+  narrative:
+    - key: 1
+      text: "Anti-virus protection can be added to Cloud Foundry via the BOSH Add-on feature. \  
+      \ ClamAV is a widely used open source solution for anti-virus protection.  A ClamAV \ 
+      \ Add-on release is available, or customers may also deploy another anti-virus solution packaged \
+      \ as a BOSH Add-on. Using this Add-on feature, operators can ensure that the anti-virus agent is \
+      \ installed on all target VMs across the Cloud foundry deployment."
+  standard_key: PCI-DSS-Standards
+- control_key: 5.2
+  narrative:
+    - key: b
+      text: "ClamAV configuration is controlled via the runtime-configuration.yml deployment manifest, \
+      \ and the ClamAV configuration file.  Periodic and/or on-demand scanning may be verified by \
+      \ inspecting these files." 
+    - key: c
+      text: "The ClamAV anti-virus signatures are kept up to date via the fleshclam daemon, which is \
+      \ installed as part of the add-on release. Logs providing evidence of anti-virus scan activity \
+      \ are emitted to syslog. "
+    - key: d
+      text: "All ClamAV add-on logs are written to the configured syslog drain.  The proper retention \
+      \ and lifecycle management of these logs is then the responsibility of the operators."
+  standard_key: PCI-DSS-Standards
+- control_key: 5.3
+  narrative:
+    - key: a
+      text: "BOSH and monit ensure that any deployed jobs, including ClamAV anti-virus, \
+      \ remain healthy. If for some reason the ClamAV anti-virus job is not actively running, \
+      \ BOSH will detect and correct the condition." 
+    - key: b
+      text: "As described above, BOSH is responsible for maintaining the inventory of active jobs \
+      \ in a deployment.  End users have no capability to disable or alter the anti-virus software."
+    - key: c
+      text: "Configuration of which VMs within the Cloud Foundry deployment will run the ClamAV \
+      \ anti-virus agent is determined by the BOSH Add-on runtime configuration manifest.  Changing \
+      \ which virtual machines are running anti-virus protection requires a BOSH operator to update \
+      \ the runtime configuration deployment manifest, and then perform a redeployment operation. "
+  standard_key: PCI-DSS-Standards
+  covered_by: []
+  implementation_statuses: complete
