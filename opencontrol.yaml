@@ -4,6 +4,7 @@ metadata:
   description: Cloud Foundry Platform
   maintainers:
     - gabriel.ramirez@gsa.gov
+    - jfield@pivotal.io
 components:
   - ./ApplicationSecurityGroups
   - ./CloudController
@@ -13,3 +14,4 @@ components:
   - ./UAA
   - ./Loggregator
   - ./IPsec-add-on
+  - ./ClamAV-add-on
