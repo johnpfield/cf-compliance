@@ -10,8 +10,9 @@ components:
   - ./CloudController
   - ./Warden
   - ./BOSH
-  - ./DEA 
+  - ./DEA
   - ./UAA
   - ./Loggregator
   - ./IPsec-add-on
   - ./ClamAV-add-on
+  - ./CredHub
